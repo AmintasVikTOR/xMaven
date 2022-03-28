@@ -7,7 +7,12 @@ public class Main {
         System.out.println(trueOrFalse());
         System.out.println(helloWelcome());
         System.out.println(myRandomDouble());
+        System.out.println(myRandomInteger());
 
+    }
+
+    private static int myRandomInteger() {
+        return RandomUtils.nextInt();
     }
 
     public static boolean trueOrFalse() {
