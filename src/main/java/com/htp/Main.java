@@ -8,6 +8,7 @@ public class Main {
         System.out.println(helloWelcome());
         System.out.println(myRandomDouble());
         System.out.println(myRandomInteger());
+        System.out.println(myRandomInteger());//chapter2
 
     }
 
