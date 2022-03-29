@@ -9,6 +9,8 @@ public class Main {
         System.out.println(myRandomDouble());
         System.out.println(myRandomInteger());
         System.out.println(myRandomInteger());//chapter2
+        System.out.println(myRandomInteger());//chapter3.1
+        System.out.println(myRandomFloat());//chapter3.1
 
     }
 
@@ -27,4 +29,8 @@ public class Main {
     public static double myRandomDouble() {
         return RandomUtils.nextDouble();
     }
+
+    public static double myRandomFloat() {
+        return RandomUtils.nextFloat();
+    }//3.1
 }
