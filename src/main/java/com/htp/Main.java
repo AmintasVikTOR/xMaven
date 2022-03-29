@@ -7,21 +7,8 @@ public class Main {
         System.out.println(trueOrFalse());
         System.out.println(helloWelcome());
         System.out.println(myRandomDouble());
-        System.out.println(myRandomDouble());//master
-        System.out.println(myRandomDouble());//master
-        System.out.println(myRandomDouble());//master2
-        System.out.println(myRandomDouble());//master2
-        System.out.println(myRandomDouble());//master3
-        System.out.println(myRandomDouble());//master4
         System.out.println(myRandomInteger());
         System.out.println(myRandomInteger());//chapter2
-        System.out.println(myRandomInteger());//chapter3.1
-        System.out.println(myRandomFloat());//chapter3.1
-
-        System.out.println(myRandomFloat());//chapter3.2
-        System.out.println(myRandomFloat());//chapter3.2
-
-        System.out.println(myRandomFloat());//chapter3.3
 
     }
 
@@ -40,8 +27,4 @@ public class Main {
     public static double myRandomDouble() {
         return RandomUtils.nextDouble();
     }
-
-    public static double myRandomFloat() {
-        return RandomUtils.nextFloat();
-    }//3.1
 }
