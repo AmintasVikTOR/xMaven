@@ -11,6 +11,9 @@ public class Main {
         //Added in Master
         System.out.println(myRandomDouble());
 
+        //branch-cherry))
+        System.out.println(myRandomInteger());
+
 
     }
 
