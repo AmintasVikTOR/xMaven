@@ -8,6 +8,10 @@ public class Main {
 
         // Clear...
 
+        //Added in Master
+        System.out.println(myRandomDouble());
+
+
     }
 
     private static int myRandomInteger() {
