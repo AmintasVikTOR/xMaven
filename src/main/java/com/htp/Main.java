@@ -7,6 +7,8 @@ public class Main {
         System.out.println(trueOrFalse());
         System.out.println(helloWelcome());
         System.out.println(myRandomDouble());
+        System.out.println(myRandomDouble());//master
+        System.out.println(myRandomDouble());//master
         System.out.println(myRandomInteger());
         System.out.println(myRandomInteger());//chapter2
 
