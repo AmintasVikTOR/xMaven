@@ -14,6 +14,9 @@ public class Main {
         //branch-cherry))
         System.out.println(myRandomInteger());
 
+        //branch-cherry2
+        System.out.println(myRandomFloat());
+
 
     }
 
