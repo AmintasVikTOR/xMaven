@@ -31,4 +31,10 @@ public class Main {
     public static double myRandomDouble() {
         return RandomUtils.nextDouble();
     }
+
+    public static double myRandomFloat() {
+        return RandomUtils.nextFloat();
+    }
+
+
 }
