@@ -11,6 +11,7 @@ public class Main {
         System.out.println(myRandomDouble());//master
         System.out.println(myRandomDouble());//master2
         System.out.println(myRandomDouble());//master2
+        System.out.println(myRandomDouble());//master3
         System.out.println(myRandomInteger());
         System.out.println(myRandomInteger());//chapter2
         System.out.println(myRandomInteger());//chapter3.1
