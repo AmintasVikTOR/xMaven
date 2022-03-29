@@ -12,6 +12,9 @@ public class Main {
         System.out.println(myRandomInteger());//chapter3.1
         System.out.println(myRandomFloat());//chapter3.1
 
+        System.out.println(myRandomFloat());//chapter3.2
+        System.out.println(myRandomFloat());//chapter3.2
+
     }
 
     private static int myRandomInteger() {
