@@ -19,6 +19,8 @@ public class Main {
         System.out.println(myRandomDouble());//master5
         System.out.println(myRandomDouble());//master6
 
+        System.out.println(myRandomDouble());//master7
+
     }
 
     private static int myRandomInteger() {
