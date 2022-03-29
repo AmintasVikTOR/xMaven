@@ -23,6 +23,8 @@ public class Main {
 
         System.out.println(myRandomFloat());//chapter3.3
 
+        System.out.println(myRandomFloat());//chapter3.4
+
     }
 
     private static int myRandomInteger() {
