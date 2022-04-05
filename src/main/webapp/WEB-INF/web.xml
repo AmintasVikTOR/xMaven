@@ -7,6 +7,18 @@
                       http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
         version="4.0">
 
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+
+    <listener>
+        <listener-class>com.htp.listener.StartApplicationListener</listener-class>
+    </listener>
+
     <servlet>
         <servlet-name>MainServlet</servlet-name>
         <servlet-class>com.htp.controller.FrontController</servlet-class>
@@ -28,6 +40,22 @@
         <jsp-file>/WEB-INF/jsp/byebye.jsp</jsp-file>
     </servlet>
 
+    <servlet>
+        <servlet-name>Nbrb</servlet-name>
+        <servlet-class>com.htp.controller.Currencies</servlet-class>
+    </servlet>
+
+    <filter>
+        <filter-name>CharsetFilter</filter-name>
+        <filter-class>com.htp.filter.CharsetFilter</filter-class>
+    </filter>
+
+    <filter>
+        <filter-name>SecondFilter</filter-name>
+        <filter-class>com.htp.filter.SecondFilter</filter-class>
+    </filter>
+
+    <!-- Mapping sources-->
     <servlet-mapping>
         <servlet-name>HelloWeb</servlet-name>
         <url-pattern>/hello</url-pattern>
@@ -38,4 +66,25 @@
         <url-pattern>/bye</url-pattern>
     </servlet-mapping>
 
+    <servlet-mapping>
+        <servlet-name>Nbrb</servlet-name>
+        <url-pattern>/nbrb</url-pattern>
+    </servlet-mapping>
+
+    <filter-mapping>
+        <filter-name>CharsetFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>SecondFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <session-config>
+        <session-timeout>10</session-timeout>
+    </session-config>
+
 </web-app>
+
+        <!-- comments-->
