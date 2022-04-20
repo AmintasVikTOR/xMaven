@@ -7,6 +7,10 @@
 Hello!
 <p>
     It's my Bye page!)
+
+
+    ${userNames}
+
 </p>
 </body>
 </html>
