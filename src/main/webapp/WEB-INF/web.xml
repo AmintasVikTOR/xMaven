@@ -42,7 +42,7 @@
 
     <servlet>
         <servlet-name>Nbrb</servlet-name>
-        <servlet-class>com.htp.controller.Currencies</servlet-class>
+        <servlet-class>com.htp.controller.Currencies_FOR_DELETE</servlet-class>
     </servlet>
 
     <filter>

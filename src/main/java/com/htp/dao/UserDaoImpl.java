@@ -28,13 +28,14 @@ public class UserDaoImpl implements UserDao {
 
 
     @Override
-    public List<User> findAll() {
+    public List<User> searchParam(String searchParam) {
         String driverName = config.getProperty(DATABASE_DRIVER_NAME);
         String url = config.getProperty(DATABASE_URL);
         String login = config.getProperty(DATABASE_LOGIN);
         String databasePassword = config.getProperty(DATABASE_PASSWORD);
 
-        String findAllQuery = "SELECT * FROM \"NSI\".m_users";
+        String findAllQuery = "SELECT * FROM \"NSI\".m_users where id = ?";
+
         List<User> userResultList = new ArrayList<>();
         /*===1 Loading driver===*/
         try {
@@ -49,9 +50,52 @@ public class UserDaoImpl implements UserDao {
 
         try (Connection connection = DriverManager.getConnection(url, login, databasePassword);
                 /*===3 Get statement from connection===*/
-             PreparedStatement preparedStatement = connection.prepareStatement(findAllQuery);
-             //
-        ) {
+             //PreparedStatement preparedStatement = connection.prepareStatement(findAllQuery);
+             PreparedStatement preparedStatement = connection.prepareStatement(findAllQuery)) {
+
+            preparedStatement.setLong(1, Long.parseLong(searchParam));
+            /*=== 4 Execute Query*/
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            /*parsing..*/
+            while (resultSet.next()) {
+                /*==6 Adding parsed info into collection*/
+                userResultList.add(parseResultSet(resultSet));
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+
+        return userResultList;
+    }
+
+    @Override
+    public List<User> findAll() {
+        String driverName = config.getProperty(DATABASE_DRIVER_NAME);
+        String url = config.getProperty(DATABASE_URL);
+        String login = config.getProperty(DATABASE_LOGIN);
+        String databasePassword = config.getProperty(DATABASE_PASSWORD);
+
+        String findAllQuery = "SELECT * FROM \"NSI\".m_users";
+        String findAllQueryForPrepate = "SELECT * FROM \"NSI\".m_users where id > ? order by id desc";
+        List<User> userResultList = new ArrayList<>();
+        /*===1 Loading driver===*/
+        try {
+            Class.forName(driverName);
+        } catch (ClassNotFoundException e) {
+            //e.printStackTrace();
+            System.out.println("Don't worry!!!");
+        }
+
+        /*===2 Driver manager. Get connection====*/
+
+
+        try (Connection connection = DriverManager.getConnection(url, login, databasePassword);
+                /*===3 Get statement from connection===*/
+             //PreparedStatement preparedStatement = connection.prepareStatement(findAllQuery);
+             PreparedStatement preparedStatement = connection.prepareStatement(findAllQueryForPrepate)) {
+
+            preparedStatement.setLong(1, 30L);
             /*=== 4 Execute Query*/
             ResultSet resultSet = preparedStatement.executeQuery();
 

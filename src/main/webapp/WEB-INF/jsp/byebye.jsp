@@ -10,6 +10,8 @@ Hello!
 
 
     ${userNames}
+    <br>
+    ${currenciesNames}
 
 </p>
 </body>

@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class Currencies extends HttpServlet {
+public class Currencies_FOR_DELETE extends HttpServlet {
 
-    public Currencies() {
+    public Currencies_FOR_DELETE() {
         super();
     }
 
